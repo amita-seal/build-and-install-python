@@ -228,4 +228,3 @@ export async function parseInputs(): Promise<ActionInputs> {
     version: new PythonVersion(await extractPythonVersion())
   };
 }
-
