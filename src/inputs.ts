@@ -42,7 +42,7 @@ export class PythonVersion {
       this.version = pythonVersion;
     } else {
       this.type = PythonType.CPython;
-      pythonVersion = pythonVersion.replace(/v/g, '');
+      pythonVersion = pythonVersion.replace(/^v/g, '');
       const range = semverValidRange(pythonVersion);
       if (!range) {
         throw new Error(
